@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
+    "dotenv-webpack": "^8.0.1",
     "vite": "^4.2.0",
     "vite-plugin-vuetify": "^1.0.0"
   }

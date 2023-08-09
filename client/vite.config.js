@@ -2,12 +2,19 @@
 import vue from '@vitejs/plugin-vue'
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
+const Dotenv = require('dotenv-webpack');
+
 // Utilities
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  configureWebpack: {
+    plugins: [
+      new Dotenv()
+    ]
+  },
   plugins: [
     vue({ 
       template: { transformAssetUrls }

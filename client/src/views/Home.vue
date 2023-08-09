@@ -40,11 +40,13 @@
         name: ''
     });
 
+    const weatherApiKey = import.meta.env.VITE_APP_WEATHER_API;
+
     //Methods:
 
     const getWeatherApi = async () => {
         //The city is static only ( testing );
-        let url = `https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=9ddfd5eade7dd703db6067fb48b9fecc`;
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=${weatherApiKey}`;
 
         try {
             const response = await axios.post(url);
